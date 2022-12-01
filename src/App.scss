@@ -12,7 +12,9 @@
 
         //scrolling effect
         overflow-y: scroll;
+        scroll-behavior: smooth;
         scroll-snap-type: y mandatory; // apply snap scrolling to all sections vertically (y axis)
+        
         scrollbar-width: none; // hide scrollbar for firefox
         &::-webkit-scrollbar{ // hide scrollbar for chrome
             display: none;
