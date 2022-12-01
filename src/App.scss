@@ -1,0 +1,31 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        // 70 px is the height of the topbar
+        height: calc(100vh - 70px); // + and - must be separated by a space
+        background-color: rgb(13, 187, 187);
+        position: relative; // relative to fixed topbar
+        top: 70px; // topbar height, start from 70px of the topbar
+
+
+        //scrolling effect
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory; // apply snap scrolling to all sections vertically (y axis)
+        scrollbar-width: none; // hide scrollbar for firefox
+        &::-webkit-scrollbar{ // hide scrollbar for chrome
+            display: none;
+        }
+        
+
+        // for each element in the sections class
+        > *{
+            width: 100%;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start; // snap scrolling to the start of each section
+        }
+    }
+
+
+}
