@@ -1,1 +1,10 @@
 $mainColor: #0f0a35;
+
+// break point for mobile
+$width: 768px;
+@mixin mobile {
+  // mixin for mobile, use it like this: @include mobile { ... }, it will be applied when the screen width is less than $width
+  @media (max-width: $width) {
+    @content;
+  }
+}

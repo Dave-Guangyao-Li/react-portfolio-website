@@ -1,14 +1,25 @@
+@import '../../global.scss';
+
 .works {
-  background-color: crimson;
+  background-color: lightgray;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 
+  // h1 {
+  //   text-align: center;
+  //   margin: 10px 0;
+  // }
+
   .arrow {
     height: 50px;
     position: absolute;
     cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
 
     &.left {
       left: 50px;
@@ -26,12 +37,22 @@
     position: absolute;
     left: 0;
     transition: all 1s ease-out;
+    overflow-y: scroll;
+
+    @include mobile {
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     .container {
       width: 100vw; // 100% of the width of the viewport
       display: flex;
+      // width: 100%;
+      // height: auto;
       align-items: center;
       justify-content: center;
+
       .item {
         width: 700px;
         height: 100%;
@@ -40,6 +61,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow-y: scroll;
+
+        @include mobile {
+          width: 80%;
+          max-height: 150px;
+          margin: 15px 0;
+        }
+
         .left {
           flex: 4; // split the width of the parent into 4 equal parts
           height: 80%;
@@ -84,7 +113,7 @@
         .right {
           flex: 8; // split the width of the parent into 8 equal parts
           height: 100%;
-          background-color: blueviolet;
+          // background-color: blueviolet;
           display: flex;
           align-items: center;
           justify-content: center;

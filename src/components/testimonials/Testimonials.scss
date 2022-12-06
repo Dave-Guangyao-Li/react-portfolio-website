@@ -5,21 +5,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 100%;
+  overflow-y: scroll; // parent scroll
+
+  @include mobile {
+    justify-content: space-between;
+  }
 
   h1 {
     font-size: 50px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   .container {
     width: 100%;
-    height: 80%;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
 
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .card {
       width: 250px;
-      height: 70%;
+      // max-height: 200px;
+      height: 80%;
       border-radius: 10px;
       box-shadow: 0px 0px 15px -8px black;
       display: flex;
@@ -27,11 +43,21 @@
       justify-content: space-around;
       padding: 20px;
       transition: all 1s ease;
+      // overflow-y: scroll;
+
+      @include mobile {
+        width: 80%;
+        margin: 10px 0;
+      }
 
       &.featured {
         width: 300px;
-        height: 75%;
+        height: 80%;
         margin: 0 30px;
+        @include mobile {
+          width: 80%;
+          margin: 10px 0;
+        }
       }
 
       &:hover {
@@ -42,6 +68,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        // overflow-y: scroll;
 
         img {
           &.left,
@@ -49,11 +76,15 @@
             height: 25px;
           }
           &.user {
-            height: 60px;
-            width: 60px;
+            height: 50px;
+            width: 50px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 30px;
+            margin: 0 20px;
+          }
+          @include mobile {
+            width: 40px;
+            height: 40px;
           }
         }
       }

@@ -1,10 +1,20 @@
+@import '../../global.scss';
+
 .contact {
   background-color: white;
   display: flex;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   .left {
+    display: flex;
     flex: 1;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
     img {
       height: 100%;
     }
@@ -38,6 +48,10 @@
         font-size: 18px;
         font-weight: 600;
         outline: none;
+        @include mobile {
+          width: 80%;
+          height: 20px;
+        }
       }
 
       textarea {
@@ -49,6 +63,10 @@
         font-size: 18px;
         font-weight: 600;
         outline: none;
+        @include mobile {
+          width: 80%;
+          height: 40%;
+        }
       }
 
       button {

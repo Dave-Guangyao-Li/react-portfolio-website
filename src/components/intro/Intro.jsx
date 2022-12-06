@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import './Intro.scss'
-import { init } from 'ityped'
+import { init } from 'ityped' // ityped is a library that allows us to create animated text
 
 export default function Intro() {
   const textRef = useRef() // useRef is a hook that allows us to access the DOM just like document.querySelector
@@ -9,9 +9,10 @@ export default function Intro() {
     // console.log(textRef): object.current
     // initialize item
     init(textRef.current, {
+      // init is a function that takes two arguments: the DOM element and the options
       showCursor: false,
       strings: ['Developer', 'Designer', 'Content Creator'],
-      backDelay: 1500,
+      backDelay: 100,
       backSpeed: 60,
       showCursor: true,
     })
