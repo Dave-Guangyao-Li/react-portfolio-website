@@ -1,9 +1,35 @@
 import PortfolioList from '../portfolioList/PortfolioList'
 import './Portfolio.scss'
 import { useState, useEffect } from 'react'
+import {
+  featuredPortfolio,
+  webPortfolio,
+  mobilePortfolio,
+  designPortfolio,
+} from '../../data'
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured')
+  const [data, setData] = useState([]) // set portfolio data
+
+  useEffect(() => {
+    switch (selected) {
+      case 'featured':
+        setData(featuredPortfolio)
+        break
+      case 'web':
+        setData(webPortfolio)
+        break
+      case 'mobile':
+        setData(mobilePortfolio)
+        break
+      case 'design':
+        setData(designPortfolio)
+        break
+      default:
+        setData(featuredPortfolio)
+    }
+  })
 
   const list = [
     {
@@ -49,30 +75,12 @@ export default function Portfolio() {
       </ul>
 
       <div className='container'>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
-        <div className='item'>
-          <img src='assets/analysis-page.jpg' alt='' />
-          <h3>Banking App</h3>
-        </div>
+        {data.map((d) => (
+          <div className='item'>
+            <img src={d.img} alt={d.title} />
+            <h3>{d.title}</h3>
+          </div>
+        ))}
       </div>
     </div>
   )
