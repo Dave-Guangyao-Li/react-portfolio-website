@@ -11,7 +11,11 @@ export default function Intro() {
     init(textRef.current, {
       // init is a function that takes two arguments: the DOM element and the options
       showCursor: false,
-      strings: ['Web Development', 'Data Science', 'Machine Learning'],
+      strings: [
+        'Full-stack Web Development',
+        'Data Science',
+        'Machine Learning',
+      ],
       backDelay: 100,
       backSpeed: 60,
       showCursor: true,
