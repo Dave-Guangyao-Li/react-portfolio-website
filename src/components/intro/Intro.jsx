@@ -11,7 +11,7 @@ export default function Intro() {
     init(textRef.current, {
       // init is a function that takes two arguments: the DOM element and the options
       showCursor: false,
-      strings: ['Developer', 'Designer', 'Content Creator'],
+      strings: ['Web Development', 'Data Science', 'Machine Learning'],
       backDelay: 100,
       backSpeed: 60,
       showCursor: true,
@@ -28,10 +28,10 @@ export default function Intro() {
       <div className='right'>
         <div className='wrapper'>
           <h2>Hi There, I'm</h2>
-          <h1>John Doe</h1>
+          <h1>Guangyao Li</h1>
           <h3>
             {/* animated span using ityped */}
-            Freelance <span ref={textRef}></span>
+            Focused fields: <span ref={textRef}></span>
           </h3>
         </div>
 
