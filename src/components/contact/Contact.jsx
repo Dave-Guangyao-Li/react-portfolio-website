@@ -57,41 +57,53 @@ export default function Contact() {
           <input
             name='from_name'
             type='text'
-            placeholder='name'
+            placeholder='Your Name'
             value={toSend.from_name}
             onChange={handleChange}
           />
           <input
             name='reply_to'
             type='email'
-            placeholder='Email'
+            placeholder='Your Email'
             value={toSend.reply_to}
             onChange={handleChange}
           />
           <textarea
             name='message'
-            placeholder='Message'
+            placeholder='Your Message'
             value={toSend.message}
             onChange={handleChange}
           />
           <button type='submit'>Send</button>
           {message && <span>Thanks for connecting, I'll reply ASAP ;)</span>}
         </form>
-        <h2>Other Social Platform</h2>
+        <h2>Social Platforms</h2>
 
         <div className='social'>
           <div className='social-linkedin'>
-            <a href='https://www.linkedin.com/in/dave-guangyao-li'>
+            <a
+              href='https://www.linkedin.com/in/dave-guangyao-li'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <img src='assets/linkedin.png' alt='linkedin' />
             </a>
           </div>
           <div className='social-twitter'>
-            <a href='https://twitter.com/Dave_GY_Li'>
+            <a
+              href='https://twitter.com/Dave_GY_Li'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <img src='assets/twitter.png' alt='twitter' />
             </a>
           </div>
           <div className='social-github'>
-            <a href='https://github.com/Dave-Guangyao-Li'>
+            <a
+              href='https://github.com/Dave-Guangyao-Li'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <img src='assets/github-logo.png' alt='github' />
             </a>
           </div>
