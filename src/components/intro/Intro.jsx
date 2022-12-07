@@ -25,7 +25,7 @@ export default function Intro() {
     <div className='intro' id='intro'>
       <div className='left'>
         <div className='img-container'>
-          <img src='assets/man.png' alt='profile-pic' />
+          <img src='assets/profile-pic.jpg' alt='profile-pic' />
         </div>
       </div>
 
@@ -37,6 +37,17 @@ export default function Intro() {
             {/* animated span using ityped */}
             Focused fields: <span ref={textRef}></span>
           </h3>
+          <div className='self-intro'>
+            <p>
+              I have both analytical and programming skills. I enjoy developing
+              Web apps especially writing front-end code with JavaScript and
+              React. In addition, I'm very excited about the emerging Web3
+              Decentralized technologies which I think would have the potential
+              to lead to a more equitable society. I'm also interested in Data
+              Science and Machine Learning. I'm currently looking for a
+              full-time position as a Software Engineer.
+            </p>
+          </div>
         </div>
 
         <a href='#portfolio'>
