@@ -1,6 +1,9 @@
 import PortfolioList from '../portfolioList/PortfolioList'
 import './Portfolio.scss'
 import { useState, useEffect } from 'react'
+
+import ProjectModal from '../projectModal/ProjectModal'
+
 import {
   featuredPortfolio,
   webPortfolio,
@@ -8,9 +11,23 @@ import {
   designPortfolio,
 } from '../../data'
 
+// add modal to show the project details
+
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured')
   const [data, setData] = useState([]) // set portfolio data
+
+  const [open, setOpen] = useState(false) // set modal state
+
+  // set the state of modal to open upon clicking a card
+  const handleClick = () => {
+    setOpen(true)
+  }
+
+  // handle modal close event
+  const handleCloseModal = () => {
+    setOpen(false)
+  }
 
   useEffect(() => {
     switch (selected) {
@@ -33,28 +50,24 @@ export default function Portfolio() {
 
   const list = [
     {
-      id: 'featured',
-      title: 'Featured',
+      id: 'html-and-css',
+      title: 'HTML and CSS',
     },
     {
-      id: 'web',
-      title: 'Web App',
+      id: 'vanilla-js',
+      title: 'Vanilla JS',
     },
     {
-      id: 'mobile',
-      title: 'Mobile App',
+      id: 'responsive-design',
+      title: 'Responsive Design',
     },
     {
-      id: 'design',
-      title: 'Design',
+      id: 'readct-js',
+      title: 'React JS',
     },
     {
-      id: 'content',
-      title: 'Content',
-    },
-    {
-      id: 'other',
-      title: 'Other',
+      id: 'blockchain',
+      title: 'Blockchain',
     },
   ]
 
@@ -76,9 +89,15 @@ export default function Portfolio() {
 
       <div className='container'>
         {data.map((d) => (
-          <div className='item'>
+          <div className='item' onClick={handleClick}>
             <img src={d.img} alt={d.title} />
             <h3>{d.title}</h3>
+
+            <ProjectModal
+              data={data}
+              open={open}
+              handleCloeseModal={handleCloseModal}
+            />
           </div>
         ))}
       </div>
