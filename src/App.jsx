@@ -1,6 +1,7 @@
 import Intro from './components/intro/Intro'
 import Topbar from './components/topbar/Topbar'
 import Portfolio from './components/portfolio/Portfolio'
+import Resume from './components/resume/Resume'
 import Works from './components/works/Works'
 import Testimonials from './components/testimonials/Testimonials'
 import Contact from './components/contact/Contact'
@@ -20,7 +21,8 @@ function App() {
       <div className='sections'>
         <Intro></Intro>
         <Portfolio></Portfolio>
-        <Works></Works>
+        <Resume></Resume>
+        {/* <Works></Works> */}
         {/* <Testimonials></Testimonials> */}
         <Contact></Contact>
       </div>
