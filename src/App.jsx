@@ -20,9 +20,9 @@ function App() {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}></Menu>
       <div className='sections'>
         <Intro></Intro>
-        <Portfolio></Portfolio>
+        {/* <Portfolio></Portfolio> */}
+        <Works></Works>
         <Resume></Resume>
-        {/* <Works></Works> */}
         {/* <Testimonials></Testimonials> */}
         <Contact></Contact>
       </div>

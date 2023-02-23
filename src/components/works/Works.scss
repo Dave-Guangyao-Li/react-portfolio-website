@@ -32,7 +32,7 @@
   }
 
   .slider {
-    height: 350px;
+    height: 650px;
     display: flex;
     position: absolute;
     left: 0;
@@ -46,6 +46,7 @@
     }
 
     .container {
+      background-image: url('https://images.unsplash.com/photo-1616166330003-8b5f9b5b5f1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
       width: 100vw; // 100% of the width of the viewport
       display: flex;
       // width: 100%;
@@ -54,8 +55,8 @@
       justify-content: center;
 
       .item {
-        width: 700px;
-        height: 100%;
+        width: 70%;
+        height: 80%;
         background-color: white;
         border-radius: 20px;
         display: flex;
@@ -64,37 +65,57 @@
         overflow-y: scroll;
 
         @include mobile {
-          width: 80%;
-          max-height: 150px;
+          width: 90%;
+          height: 100%;
+          max-height: 350px;
           margin: 15px 0;
         }
 
         .left {
-          flex: 4; // split the width of the parent into 4 equal parts
-          height: 80%;
+          flex: 6; // split the width of the parent into 4 equal parts
+          height: 100%;
           //   background-color: aqua;
           display: flex;
           align-items: center;
           justify-content: center;
           .leftContainer {
             width: 90%;
-            height: 70%;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-
-            .imgContainer {
-              width: 40px;
-              height: 40px;
-              border-radius: 50%;
-              background-color: coral;
+            justify-content: flex-start;
+            #see-project {
               display: flex;
               align-items: center;
               justify-content: center;
-              img {
-                width: 25px;
+              margin: 10px 0;
+              a {
+                text-decoration: none;
+                color: black;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 10px 20px;
+                border-radius: 10px;
+                border: 1px solid black;
+                transition: all 0.5s ease;
+                &:hover {
+                  background-color: black;
+                  color: white;
+                }
               }
             }
+            // .imgContainer {
+            //   width: 40px;
+            //   height: 40px;
+            //   border-radius: 50%;
+            //   background-color: coral;
+            //   display: flex;
+            //   align-items: center;
+            //   justify-content: center;
+            //   img {
+            //     width: 25px;
+            //   }
+            // }
             h2 {
               font-size: 20px;
             }
@@ -104,14 +125,14 @@
             span {
               font-size: 12px;
               font-weight: 600;
-              text-decoration: underline;
+              // text-decoration: underline;
               cursor: pointer;
             }
           }
         }
 
         .right {
-          flex: 8; // split the width of the parent into 8 equal parts
+          flex: 6; // split the width of the parent into 6 equal parts
           height: 100%;
           // background-color: blueviolet;
           display: flex;
@@ -119,8 +140,8 @@
           justify-content: center;
           overflow: hidden; // hide the content that is outside the parent
           img {
-            width: 400px;
-            transform: rotate(-10deg);
+            width: 100%;
+            // transform: rotate(-10deg);
           }
         }
       }

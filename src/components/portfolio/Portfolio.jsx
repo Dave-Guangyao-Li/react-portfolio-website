@@ -93,11 +93,11 @@ export default function Portfolio() {
             <img src={d.img} alt={d.title} />
             <h3>{d.title}</h3>
 
-            <ProjectModal
+            {/* <ProjectModal
               data={data}
               open={open}
               handleCloeseModal={handleCloseModal}
-            />
+            /> */}
           </div>
         ))}
       </div>

@@ -24,16 +24,21 @@ export default function Works() {
             <div className='item'>
               <div className='left'>
                 <div className='leftContainer'>
-                  <div className='imgContainer'>
+                  {/* <div className='imgContainer'>
                     <img src={d.icon} alt={d.title} />
-                  </div>
-                  <h2>{d.title}</h2>
-                  <p>{d.desc}</p>
-                  <span>Projects</span>
+                  </div> */}
+                  <h2>{d.title} </h2>
+
+                  <p style={{ whiteSpace: 'pre-line' }}>{d.desc}</p>
+                  <span id='see-project'>
+                    <a href={d.url} target='_blank'>
+                      See Project
+                    </a>
+                  </span>
                 </div>
               </div>
               <div className='right'>
-                <img src='assets/mobile.png' alt='' />
+                <img src='assets/MSCI-poster.png' alt='' />
               </div>
             </div>
           </div>
