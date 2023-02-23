@@ -39,13 +39,20 @@ export default function Intro() {
           </h3>
           <div className='self-intro'>
             <p>
-              I have both analytical and programming skills. I enjoy developing
-              Web apps especially writing front-end code with JavaScript and
-              React. In addition, I'm very excited about the emerging Web3
-              Decentralized technologies which I think would have the potential
-              to lead to a more equitable society. I'm also interested in Data
-              Science and Machine Learning. I'm currently looking for a
-              full-time position as a Software Engineer.
+              I'm a developer with experience in HTML, CSS, JavaScript, React,
+              and SQL, as well as backend development using the Django framework
+              and Java SSM framework. I'm proficient in Python and have worked
+              on data engineering tasks using scientific computing libraries.
+              I've developed and optimized data pipelines, resulting in a 25%
+              increase in prediction accuracy, and have experience with cloud
+              platform services like Azure and AWS. In my free time, I enjoy
+              teaching myself new programming languages and participating in
+              hackathons and online coding challenges. I'm especially interested
+              in learning new technologies related to full-stack web
+              development, big data, and blockchain, and I'm excited to continue
+              growing my skills as an engineer and analytical thinker. I'm
+              currently looking for a full-time position as a Software Engineer
+              or Data Engineer.
             </p>
           </div>
         </div>
