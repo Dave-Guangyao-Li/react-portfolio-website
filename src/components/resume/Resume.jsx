@@ -9,7 +9,7 @@ function Resume() {
       <iframe
         style={style}
         title='resume'
-        src='https://drive.google.com/file/d/1a_3osX4vYaK6EZGVuI1wqsqLETniA1cR/preview'
+        src='https://drive.google.com/file/d/1W51ixnbJGYEvTrVH1AXFzUKdiF1bP2tk/preview'
         width='640'
         height='480'
         allow='autoplay'
